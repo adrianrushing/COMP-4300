@@ -1,0 +1,73 @@
+{C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 4/bva.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 4/bva.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Compiling package bv_arithmetic
+
+} {} {}} {C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 4/lab4_datapath_v5.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 4/lab4_datapath_v5.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Compiling package dlx_types
+-- Loading package dlx_types
+-- Loading package bv_arithmetic
+-- Loading package delay_package
+-- Compiling entity alu
+-- Compiling architecture behaviour of alu
+-- Compiling entity mips_equal
+-- Compiling architecture behaviour of mips_equal
+-- Compiling entity mips_register
+-- Compiling architecture behaviour of mips_register
+-- Compiling entity mips_bit_register
+-- Compiling architecture behaviour of mips_bit_register
+-- Compiling entity mux
+-- Compiling architecture behaviour of mux
+-- Compiling entity index_mux
+-- Compiling architecture behaviour of index_mux
+-- Compiling entity sign_extend
+-- Compiling architecture behaviour of sign_extend
+-- Compiling entity add4
+-- Compiling architecture behaviour of add4
+-- Compiling entity regfile
+-- Compiling architecture behaviour of regfile
+-- Compiling entity DM
+-- Compiling architecture behaviour of DM
+-- Compiling entity IM
+-- Compiling architecture behaviour of IM
+
+} {} {}} {C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 4/bva-b.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 4/bva-b.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Compiling package body bv_arithmetic
+-- Loading package bv_arithmetic
+
+} {} {}} {C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 4/dlx-types.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 4/dlx-types.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Compiling package dlx_types
+
+} {} {}} {C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 4/lab4_mips_v6.vhd} {0 {vcom -work work -2002 -explicit -stats=none {C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 4/lab4_mips_v6.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package dlx_types
+-- Compiling entity mips
+-- Compiling architecture struct of mips
+** Error: (vcom-13) Recompile work.mips_decoder because work.dlx_types has changed.
+** Error (suppressible): C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 4/lab4_mips_v6.vhd(62): (vcom-1195) Cannot find expanded name "work.mips_decoder".
+** Error: C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 4/lab4_mips_v6.vhd(62): Unknown expanded name.
+** Error: (vcom-13) Recompile work.mips_controller because work.dlx_types has changed.
+** Error (suppressible): C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 4/lab4_mips_v6.vhd(73): (vcom-1195) Cannot find expanded name "work.mips_controller".
+** Error: C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 4/lab4_mips_v6.vhd(73): Unknown expanded name.
+-- Loading entity index_mux
+-- Loading package bv_arithmetic
+-- Loading entity IM
+-- Loading entity DM
+-- Loading entity mips_register
+-- Loading entity add4
+-- Loading entity regfile
+-- Loading entity sign_extend
+-- Loading entity mux
+-- Loading package delay_package
+-- Loading entity alu
+-- Loading entity mips_equal
+** Error: C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 4/lab4_mips_v6.vhd(283): VHDL Compiler exiting
+
+} {7.0 8.0 9.0 11.0 12.0 13.0 25.0 26.0} {}}

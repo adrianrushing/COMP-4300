@@ -1,0 +1,735 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/18.1
+Eadd4
+Z0 w1713922651
+Z1 DPx4 work 13 bv_arithmetic 0 22 LZgoU72;<NkmOWPlz8?Of2
+Z2 DPx4 work 9 dlx_types 0 22 Eo_OklE4DDbl`WRV2CZ0c2
+Z3 dC:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 4
+Z4 8C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 4/lab4_datapath_v5.vhd
+Z5 FC:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 4/lab4_datapath_v5.vhd
+l0
+L224
+VmmDV1ea=biKR_b_>k09NU2
+!s100 8;JPnTdWaM6iTFlX^nzD_1
+Z6 OV;C;10.5b;63
+32
+Z7 !s110 1714006198
+!i10b 1
+Z8 !s108 1714006198.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 4/lab4_datapath_v5.vhd|
+Z10 !s107 C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 4/lab4_datapath_v5.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Abehaviour
+R1
+R2
+Z13 DEx4 work 4 add4 0 22 mmDV1ea=biKR_b_>k09NU2
+l230
+L229
+V_;lJQJ[]IT4UMReEFI^YA0
+!s100 gKloAX9R0eVniEGgnU@0:0
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ealu
+R0
+Z14 DPx4 work 13 delay_package 0 22 Xfkij>Mc;D;3ge54^n=<H1
+R1
+R2
+R3
+R4
+R5
+l0
+L21
+VJIGKQAOZ`BW:287J4PUgJ0
+!s100 OTFfS<HNY8?4F?5RDXz>V0
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abehaviour
+R14
+R1
+R2
+Z15 DEx4 work 3 alu 0 22 JIGKQAOZ`BW:287J4PUgJ0
+l28
+L27
+VXDo1hRTFeTEaL4bB;zhMY3
+!s100 6PNoM>A^Gh^VT5GETX1]20
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abehavior
+R1
+R2
+DEx4 work 3 alu 0 22 Lo]:nW^W?^ch]>zlWf;9h2
+l16
+L15
+VO1UE2N5MN20YnWnc_G3BZ2
+!s100 Tf:lGO0oZInH=m_G14Umg2
+R6
+32
+Z16 !s110 1713924993
+!i10b 1
+Z17 !s108 1713924993.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 2/ALU_Architecture.vhd|
+!s107 C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 2/ALU_Architecture.vhd|
+!i113 1
+R11
+R12
+FC:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 2/ALU_Architecture.vhd
+w1713279657
+8C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 2/ALU_Architecture.vhd
+Pbv_arithmetic
+Z18 w1713884841
+R3
+8C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 4/bva.vhd
+FC:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 4/bva.vhd
+l0
+L15
+VLZgoU72;<NkmOWPlz8?Of2
+!s100 DK;Y`J0lJAh`j:XUgQ7B<1
+R6
+32
+b1
+R7
+!i10b 1
+R8
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 4/bva.vhd|
+!s107 C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 4/bva.vhd|
+!i113 1
+R11
+R12
+Bbody
+R1
+8C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 4/bva-b.vhd
+FC:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 4/bva-b.vhd
+l0
+L1
+VIOX_LK53`U3VRDI:D^iY00
+!s100 ;^d^hPQojBY3:39_Lf`ZP1
+R6
+32
+R7
+!i10b 1
+R8
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 4/bva-b.vhd|
+!s107 C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 4/bva-b.vhd|
+!i113 1
+R11
+R12
+Pdelay_package
+w1713921712
+R3
+8C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 4/delay_package.vhd
+FC:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 4/delay_package.vhd
+l0
+L1
+VXfkij>Mc;D;3ge54^n=<H1
+!s100 QYIhfB6@_<]Gb0G7:@N`M2
+R6
+32
+R16
+!i10b 1
+R17
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 4/delay_package.vhd|
+!s107 C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 4/delay_package.vhd|
+!i113 1
+R11
+R12
+Edlx_register
+Z19 w1713892171
+R1
+R2
+R3
+Z20 8C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 3/dlx_register.vhd
+Z21 FC:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 3/dlx_register.vhd
+l0
+L4
+VIEnLMl<16[ZegMJKiJXzW3
+!s100 hNdi@4bje@_MjX_1EhbV^2
+R6
+32
+Z22 !s110 1713898380
+!i10b 1
+Z23 !s108 1713898380.000000
+Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 3/dlx_register.vhd|
+Z25 !s107 C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 3/dlx_register.vhd|
+!i113 1
+R11
+R12
+Abehaviour
+R1
+R2
+DEx4 work 12 dlx_register 0 22 IEnLMl<16[ZegMJKiJXzW3
+l12
+L11
+Va=?VnC2S]GoEfdM:]T]X93
+!s100 P9Y3nY;k?;U^<hL_^Vc^Q3
+R6
+32
+R22
+!i10b 1
+R23
+R24
+R25
+!i113 1
+R11
+R12
+Pdlx_types
+R0
+R3
+R4
+R5
+l0
+L3
+VEo_OklE4DDbl`WRV2CZ0c2
+!s100 Q@j@;9cQb0G<aNlj6<`Ie0
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Edm
+R0
+R1
+R2
+R3
+R4
+R5
+l0
+L290
+VRA?e;[`QHJG^EMihD4l@j1
+!s100 kKWSO[j4_>ZHXY757YO9Y3
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abehaviour
+R1
+R2
+Z26 DEx4 work 2 dm 0 22 RA?e;[`QHJG^EMihD4l@j1
+l302
+L300
+V9TPD>VPS79n;F8nm[n>b@0
+!s100 jLUK13e27DcCNOZ5@Zo_H3
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eim
+R0
+R1
+R2
+R3
+R4
+R5
+l0
+L330
+VjmV`MeIAT27ZiCfYREoU=0
+!s100 HlfifIgfQZSXX[@aZ^fkS3
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abehaviour
+R1
+R2
+Z27 DEx4 work 2 im 0 22 jmV`MeIAT27ZiCfYREoU=0
+l340
+L338
+VmZQm3[7@GYbfXSJW85k9L3
+!s100 F0E^[W:=Yg17gSnY5BeU52
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eindex_mux
+R0
+R2
+R3
+R4
+R5
+l0
+L188
+VRI1@CK=[T7]=>XoiHEMl]3
+!s100 SU5HUaVC??2MfFLY]R3VB1
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abehaviour
+R2
+Z28 DEx4 work 9 index_mux 0 22 RI1@CK=[T7]=>XoiHEMl]3
+l194
+L193
+VT7ZFFiQ6jmOJYTh=PPSl02
+!s100 HkXENW=l96Uk9?A<jhdOC0
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Emips
+R18
+R2
+R3
+Z29 8C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 4/lab4_mips_v6.vhd
+Z30 FC:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 4/lab4_mips_v6.vhd
+l0
+L5
+V[ez2n5WSeMWDNCCY]hb1;1
+!s100 Da3GOZmU3:ANdmPZ>GL3G3
+R6
+32
+Z31 !s110 1714056484
+!i10b 1
+Z32 !s108 1714056484.000000
+Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 4/lab4_mips_v6.vhd|
+Z34 !s107 C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 4/lab4_mips_v6.vhd|
+!i113 1
+R11
+R12
+Astruct
+Z35 DEx4 work 10 mips_equal 0 22 ]4m[7Ne<Bhg6dzm5RK<mM2
+R14
+R15
+Z36 DEx4 work 3 mux 0 22 8j4[F8kjo74Wf;IZmGJVN1
+Z37 DEx4 work 11 sign_extend 0 22 nR4=8A5KW<z9zgKSUi7J13
+Z38 DEx4 work 7 regfile 0 22 K9b5772QaVP02Fa7FaO802
+R13
+Z39 DEx4 work 13 mips_register 0 22 WhjdMlTWa6FUhI2Q8LhQ@3
+R26
+R27
+R28
+Z40 DEx4 work 15 mips_controller 0 22 MBelYMS>XYSThT;4<Z8BR3
+R1
+Z41 DEx4 work 12 mips_decoder 0 22 `i8FPBEaFejmY:E@i4GPn0
+R2
+DEx4 work 4 mips 0 22 [ez2n5WSeMWDNCCY]hb1;1
+l61
+L10
+V=:SR3W::bSW:hQ30]4Lf=3
+!s100 bLQLZ?XhDdI2=lHQF2aVX3
+R6
+32
+R31
+!i10b 1
+R32
+R33
+R34
+!i113 1
+R11
+R12
+Emips_bit_register
+R0
+R2
+R3
+R4
+R5
+l0
+L152
+V_A>nT0c9RgQHVXQD7kHE23
+!s100 ZHNha>jQo:Ho=K2dU[hOi1
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abehaviour
+R2
+DEx4 work 17 mips_bit_register 0 22 _A>nT0c9RgQHVXQD7kHE23
+l158
+L157
+V1N8eQQFjCe@HKbPhPn?fE2
+!s100 WWeiU<9]Jm5[:l>T@Qc[23
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Emips_controller
+Z42 w1714056477
+R2
+R1
+R3
+Z43 8C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 4/lab4_control_v4.vhd
+Z44 FC:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 4/lab4_control_v4.vhd
+l0
+L53
+VMBelYMS>XYSThT;4<Z8BR3
+!s100 UnLJAmoMamTU0^Io>SFVE3
+R6
+32
+Z45 !s110 1714056481
+!i10b 1
+Z46 !s108 1714056480.000000
+Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 4/lab4_control_v4.vhd|
+Z48 !s107 C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 4/lab4_control_v4.vhd|
+!i113 1
+R11
+R12
+Abehaviour
+R2
+R1
+R40
+l85
+L83
+V?8gX5E;;D@FodhembWUmW2
+!s100 ^dfD0<DZ5KZA>S[=J1[bA1
+R6
+32
+R45
+!i10b 1
+R46
+R47
+R48
+!i113 1
+R11
+R12
+Emips_decoder
+R42
+R2
+R1
+R3
+R43
+R44
+l0
+L17
+V`i8FPBEaFejmY:E@i4GPn0
+!s100 MT6D1n9>dL8>^EdNfz2bA3
+R6
+32
+Z49 !s110 1714056480
+!i10b 1
+R46
+R47
+R48
+!i113 1
+R11
+R12
+Abehaviour
+R2
+R1
+R41
+l29
+L28
+V^SKU6:aE^mCk_eD2cOHcA3
+!s100 FjQA@ePdK:7PEYLl5dU1?1
+R6
+32
+R49
+!i10b 1
+R46
+R47
+R48
+!i113 1
+R11
+R12
+Emips_equal
+R0
+R2
+R3
+R4
+R5
+l0
+L113
+V]4m[7Ne<Bhg6dzm5RK<mM2
+!s100 P`Ue6z2T;=l6:dOW4mGeI2
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abehaviour
+R2
+R35
+l122
+L121
+VZ4B2B[4DUoBPQd3]2z?8_0
+!s100 gNzlTX:`^03WI>KFEM8>31
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Emips_register
+R0
+R2
+R3
+R4
+R5
+l0
+L135
+VWhjdMlTWa6FUhI2Q8LhQ@3
+!s100 X_aoFF0?`Ke;5HNh11EjW3
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abehaviour
+R2
+R39
+l141
+L140
+VO1noLDXdnk0dbeWOz^kWe3
+!s100 cV^X246WP2fe?hf<ABYjf1
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Emux
+R0
+R2
+R3
+R4
+R5
+l0
+L169
+V8j4[F8kjo74Wf;IZmGJVN1
+!s100 @064@9XaUfl8k8WnM^10;0
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abehaviour
+R2
+R36
+l175
+L174
+VJERmOcUPHKESYzfZLHk;33
+!s100 4Pf1A<a7eZM2`nAL]APb11
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eregfile
+R0
+R1
+R2
+R3
+R4
+R5
+l0
+L255
+VK9b5772QaVP02Fa7FaO802
+!s100 8L>DPULS3o?IcI0mXRkYX3
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abehaviour
+R1
+R2
+R38
+l271
+L264
+V63RR`Cfimi7L]0DJ5m9D52
+!s100 gYmG2Wf1nYKUjO<FLW?R:3
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Esext
+Z50 w1713898506
+R1
+R2
+R3
+Z51 8C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 3/sext.vhd
+Z52 FC:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 3/sext.vhd
+l0
+L4
+VWXZhnIieLjKLl<W;l^GRa0
+!s100 3=V^Y6gU=@039[CE<4k4T0
+R6
+32
+Z53 !s110 1713898588
+!i10b 1
+Z54 !s108 1713898588.000000
+Z55 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 3/sext.vhd|
+Z56 !s107 C:/Users/adria/Documents/Spring 2024/COMP 4300/Lab 3/sext.vhd|
+!i113 1
+R11
+R12
+Abehaviour
+R1
+R2
+DEx4 work 4 sext 0 22 WXZhnIieLjKLl<W;l^GRa0
+l11
+L10
+VC8Y_PB8>8k[XJeUi6F7:m3
+!s100 liW0=>NTO@glR[SC>R3ob3
+R6
+32
+R53
+!i10b 1
+R54
+R55
+R56
+!i113 1
+R11
+R12
+Esign_extend
+R0
+R1
+R2
+R3
+R4
+R5
+l0
+L208
+VnR4=8A5KW<z9zgKSUi7J13
+!s100 :ZJze0<O0<CP?J65HH7AP0
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abehaviour
+R1
+R2
+R37
+l214
+L213
+V=6_?oA<P[8Y_i=AD>@>@51
+!s100 2JgWa?^5jYkjUQ6MI2M<H1
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12

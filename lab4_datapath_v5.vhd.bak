@@ -1,0 +1,367 @@
+-- dlx_datapath.vhd
+
+package dlx_types is
+  subtype dlx_word is bit_vector(31 downto 0); 
+  subtype half_word is bit_vector(15 downto 0); 
+  subtype byte is bit_vector(7 downto 0); 
+
+  subtype alu_operation_code is bit_vector(3 downto 0); 
+  subtype error_code is bit_vector(3 downto 0); 
+  subtype register_index is bit_vector(4 downto 0);
+
+  subtype opcode_type is bit_vector(5 downto 0);
+  subtype offset26 is bit_vector(25 downto 0);
+  subtype func_code is bit_vector(5 downto 0);
+end package dlx_types; 
+
+use work.dlx_types.all; 
+use work.bv_arithmetic.all;  
+use work.delay_package.all;
+
+entity alu is 
+     	generic(prop_delay: time := 5 ns);
+	port(operand1, operand2: in dlx_word; operation: in alu_operation_code; 
+          signed: in bit; result: out dlx_word; error: out error_code); 
+end entity alu; 
+
+architecture behaviour of alu is
+begin
+	alu: process (operand1, operand2, operation) is 
+	     variable op_result : dlx_word;
+	     variable overflow : boolean:=false; -- By default there will be no overflow
+	begin
+		error <= "0000"; -- By default no error will have occurred
+		case (operation) is
+			
+			when "0000" => --ADD
+				if signed = '1' then
+				   bv_add(operand1, operand2, op_result, overflow);
+				   if overflow then
+					error <= "0001" after prop_delay; -- Error overflow
+				   end if;
+				else
+				   bv_addu(operand1, operand2, op_result, overflow);
+				   if overflow then
+					error <= "0001" after prop_delay; -- Error overflow
+				   end if;
+				end if;
+				result <= op_result after prop_delay;
+			when "0001" => --SUB
+				if signed = '1' then
+				   bv_sub(operand1, operand2, op_result, overflow);
+				   if overflow then
+					error <= "0001" after prop_delay; -- Error overflow
+				   end if;
+				else
+				   bv_subu(operand1, operand2, op_result, overflow);
+				   if overflow then
+					error <= "0001" after prop_delay; -- Error overflow
+				   end if;
+				end if;
+				result <= op_result after prop_delay;
+			when "0010" => --AND
+				result <= operand1 AND operand2 after prop_delay;
+			when "0011" => --OR
+				result <= operand1 OR operand2 after prop_delay;
+			when "0100" => --XOR
+				result <= x"00000000";
+				--result <= operand1 XOR operand2 after prop_delay;
+			when "0101" => --Unused
+				result <= x"00000000";
+			when "0110" => --SLL
+				result <= x"00000000";
+			when "0111" => --SRL
+				result <= x"00000000";
+			when "1000" => --SRA
+				result <= x"00000000";
+			when "1001" => --SEQ
+				result <= x"00000000";
+			when "1010" => --SNE
+				result <= x"00000000";
+			when "1011" => --SLT
+				if bv_lt(operand1, operand2) then
+				   result <= x"00000001" after prop_delay;
+				else
+				   result <= x"00000000" after prop_delay;
+				end if;
+			when "1100" => --SGT
+				result <= x"00000000";
+			when "1101" => --Unused
+				result <= x"00000000";
+			when "1110" => --MUL
+				if signed = '1' then
+				   bv_mult(operand1, operand2, op_result, overflow);
+				   if overflow then
+					error <= "0001" after prop_delay; -- Error overflow
+				   end if;
+				else
+				   bv_multu(operand1, operand2, op_result, overflow);
+				   if overflow then
+					error <= "0001" after prop_delay; -- Error overflow
+				   end if;
+				end if;
+				result <= op_result after prop_delay;
+			when "1111" => 
+				result <= x"00000000";
+		end case;
+	end process alu;
+end architecture behaviour;
+
+
+use work.dlx_types.all; 
+
+entity mips_equal is
+  generic(prop_delay: time := 5 ns);  
+  port (
+    input1, input2  : in  dlx_word;
+    output : out bit);
+
+end mips_equal;
+
+ architecture behaviour of mips_equal is
+begin
+    equal_process: process(input1, input2)
+    begin
+        if input1 = input2 then
+            output <= '1';
+        else
+            output <= '0';
+        end if;
+    end process equal_process;
+end behaviour;
+
+use work.dlx_types.all; 
+
+entity mips_register is
+     generic(prop_delay: time := 5 ns);
+     port(in_val: in dlx_word; clock: in bit; out_val: out dlx_word);
+end entity mips_register;
+
+architecture behaviour of mips_register is 
+begin
+	mips_register: process(in_val, clock)
+	begin
+		if(clock = '1') then
+			out_val <= in_val after prop_delay;
+		end if;
+	end process;
+end behaviour;
+
+use work.dlx_types.all; 
+
+entity mips_bit_register is
+     generic(prop_delay: time := 5 ns);
+     port(in_val: in bit; clock: in bit; out_val: out bit);
+end entity mips_bit_register;
+
+architecture behaviour of mips_bit_register is 
+begin
+	mips_bit_register: process(in_val, clock)
+	begin
+		if(clock = '1') then
+			out_val <= in_val after prop_delay;
+		end if;
+	end process;
+end behaviour;
+
+use work.dlx_types.all; 
+
+entity mux is
+     generic(prop_delay: time := 5 ns);
+     port (input_1,input_0 : in dlx_word; which: in bit; output: out dlx_word);
+end entity mux;
+
+architecture behaviour of mux is
+begin
+	mux: process(input_0, input_1, which)
+	begin
+		if(which ='0') then
+		   output <= input_0 after prop_delay;
+		else
+		   output <= input_1 after prop_delay;
+		end if;
+	end process;
+end behaviour;
+
+use work.dlx_types.all;
+
+entity index_mux is
+	generic(prop_delay: time := 5 ns);     
+	port (input_1,input_0 : in register_index; which: in bit; output: out register_index);
+end entity index_mux;
+
+architecture behaviour of index_mux is
+begin
+    mux_process: process(input_1, input_0, which)
+    begin
+        if which = '0' then
+            output <= input_0;
+        else
+            output <= input_1;
+        end if;
+    end process mux_process;
+end behaviour;
+
+use work.dlx_types.all;
+
+entity sign_extend is
+     generic(prop_delay: time := 5 ns);
+     port (input: in half_word; signed: in bit; output: out dlx_word);
+end entity sign_extend;
+
+architecture behaviour of sign_extend is 
+begin
+	sign_extend: process(input)
+	begin
+		output <= bv_sext(input, 32) after prop_delay;
+	end process;
+end behaviour;
+
+use work.dlx_types.all; 
+use work.bv_arithmetic.all; 
+
+entity add4 is
+    generic(prop_delay: time := 5 ns);
+    port (input: in dlx_word; output: out dlx_word);
+end entity add4;
+
+architecture behaviour of add4 is
+begin
+	add4: process(input) is 
+		variable result: dlx_word;
+		variable error: boolean := false;
+	begin
+	   case(input) is
+		-- Edge cases
+		when x"FFFFFFFC" =>
+		     output <= x"00000000" after prop_delay;
+		when x"FFFFFFFD" =>
+		     output <= x"00000001" after prop_delay;
+		when x"FFFFFFFE" =>
+		     output <= x"00000002" after prop_delay;
+		when x"FFFFFFFF" =>
+		     output <= x"00000003" after prop_delay;
+		when others =>
+		     bv_addu(input, x"00000004", result, error);
+		     output <= result after prop_delay;
+	   end case;
+	end process;
+end behaviour;
+  
+use work.dlx_types.all;
+use work.bv_arithmetic.all;  
+
+entity regfile is
+     generic(prop_delay: time := 5 ns);
+     port (read_notwrite,clock : in bit; 
+           regA,regB: in register_index; 
+	   data_in: in  dlx_word; 
+	   dataA_out,dataB_out: out dlx_word
+	   );
+end entity regfile; 
+
+architecture behaviour of regfile is
+	-- Cannot write to a file, so write to an array
+	-- 32 registers = 32 dlx_word long array
+	-- When I write to or read a 'register' it is an element of this
+	type arr is array (0 to 31) of dlx_word;
+	signal arr_sig : arr;
+
+begin
+	regfile: process(read_notwrite, clock, regA, regB, data_in)
+	begin
+	     if (clock = '1') then
+		--If only reading
+		if(read_notwrite = '1') then
+		   dataA_out <= arr_sig(bv_to_integer(regA)) after prop_delay;
+	  	   dataB_out <= arr_sig(bv_to_integer(regB)) after prop_delay;
+		--If writing
+		else
+		   arr_sig(bv_to_integer(regA)) <= data_in after prop_delay;					
+		end if;
+	     end if;
+	end process regfile;
+end behaviour;
+
+use work.dlx_types.all;
+use work.bv_arithmetic.all;
+
+entity DM is
+  
+  port (
+    address : in dlx_word;
+    readnotwrite: in bit; 
+    data_out : out dlx_word;
+    data_in: in dlx_word; 
+    clock: in bit); 
+end DM;
+
+architecture behaviour of DM is
+
+begin  -- behaviour
+
+  DM_behav: process(address,clock) is
+    type memtype is array (0 to 1024) of dlx_word;
+    variable data_memory : memtype;
+  begin
+    -- fill this in by hand to put some values in there
+    data_memory(1023) := B"00000101010101010101010101010101";
+    data_memory(0) := B"00000000000000000000000000000001";
+    data_memory(1) := B"00000000000000000000000000000010";
+    if clock'event and clock = '1' then
+      if readnotwrite = '1' then
+        -- do a read
+        data_out <= data_memory(bv_to_natural(address)/4);
+      else
+        -- do a write
+        data_memory(bv_to_natural(address)/4) := data_in; 
+      end if;
+    end if;
+
+
+  end process DM_behav; 
+
+end behaviour;
+
+use work.dlx_types.all;
+use work.bv_arithmetic.all;
+
+entity IM is
+  
+  port (
+    address : in dlx_word;
+    instruction : out dlx_word;
+    clock: in bit); 
+end IM;
+
+architecture behaviour of IM is
+
+begin  -- behaviour
+
+  IM_behav: process(address,clock) is
+    type memtype is array (0 to 1024) of dlx_word;
+    variable instr_memory : memtype;                   
+  begin
+    -- fill this in by hand to put some values in there
+    -- first instr is 'LW R1,4092(R0)' 
+    instr_memory(0) := B"10001100000000010000111111111100";
+    -- next instr is 'ADD R2,R1,R1'
+    instr_memory(1) := B"00000000001000010001000000100000";
+    -- next instr is SW R2,8(R0)'
+    instr_memory(2) := B"10101100000000100000000000001000";
+    -- next instr is LW R3,8(R0)'
+    instr_memory(3) := B"10001100000000110000000000001000"; 
+    if clock'event and clock = '1' then
+        -- do a read
+        instruction <= instr_memory(bv_to_natural(address)/4);
+    end if;
+  end process IM_behav; 
+
+end behaviour;
+
+
+
+
+
+
+
